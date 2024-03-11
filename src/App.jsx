@@ -4,6 +4,7 @@ import "./styles/EditorForm.css";
 
 export default function App() {
   const [form, setForm] = useState({
+    img: "",
     name: "",
     proffession: "",
     email: "",
@@ -12,6 +13,7 @@ export default function App() {
   });
 
   const [isEdit, setIsEdit] = useState(false);
+  const [clearStaticData, setClearStaticData] = useState(false);
 
   const handleChange = (e) => {
     setForm((prevFormData) => {
@@ -26,11 +28,16 @@ export default function App() {
     e.preventDefault();
   };
 
+  const handlePreview = () => {
+    setIsEdit(false);
+    setClearStaticData(true);
+  };
+
   return (
     <>
       {isEdit ? (
         <div onSubmit={handleSubmit} className="form-container">
-          <button onClick={() => setIsEdit(false)}>Preview</button>
+          <button onClick={handlePreview}>Preview</button>
           <form className="form">
             <input
               type="text"
@@ -38,6 +45,7 @@ export default function App() {
               onChange={handleChange}
               className="form--input"
               name="name"
+              value={form.name}
             />
 
             <input
@@ -45,6 +53,7 @@ export default function App() {
               placeholder="Your Proffession"
               onChange={handleChange}
               className="form--input"
+              value={form.proffession}
               name="proffession"
             />
 
@@ -53,6 +62,7 @@ export default function App() {
               placeholder="Email address"
               onChange={handleChange}
               className="form--input"
+              value={form.email}
               name="email"
             />
             <input
@@ -60,6 +70,7 @@ export default function App() {
               placeholder="Contact Number"
               onChange={handleChange}
               className="form--input"
+              value={form.phone_no}
               name="phone_no"
             />
             <input
@@ -67,6 +78,7 @@ export default function App() {
               placeholder="Bussieness website url"
               onChange={handleChange}
               className="form--input"
+              value={form.website}
               name="website"
             />
 
@@ -80,7 +92,7 @@ export default function App() {
       ) : (
         <>
           <button onClick={() => setIsEdit(true)}>Edit</button>
-          <Card form={form}  />
+          <Card form={form} clearStaticData={clearStaticData} />
         </>
       )}
     </>
