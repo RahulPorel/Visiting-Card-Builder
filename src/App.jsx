@@ -40,7 +40,6 @@ export default function App() {
     setClearStaticData(true);
     setclearGuideData(true);
     setRmGuideBtn(true);
-    // setClearImg(true);
   };
 
 
