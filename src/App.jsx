@@ -58,7 +58,7 @@ export default function App() {
       {isEdit ? (
         <div onSubmit={handleSubmit} className="form-container">
           <form className="form">
-            {/* <input onClick={handleFileChanges} type="file" onChange={getImg} /> */}
+         
             <Notice />
             <input
               type="text"
