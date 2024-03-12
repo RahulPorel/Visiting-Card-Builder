@@ -14,9 +14,13 @@ Visiting Card Builder let you build visiting card for your bussiness or for pers
 
 # Snapshot of Visiting Card Builder
 
-![Screenshot (344)](https://github.com/RahulPorel/Tenzies-Game/assets/98636266/27930de8-c701-4d62-9304-5ee364f39d62)
+- User Interface of Visiting Card Builder
 
-![Screenshot (345)](https://github.com/RahulPorel/Tenzies-Game/assets/98636266/994d5134-7120-4c0b-9056-125721aa2942)
+  ![Screenshot (344)](https://github.com/RahulPorel/Tenzies-Game/assets/98636266/27930de8-c701-4d62-9304-5ee364f39d62)
+
+- Editing Form
+
+  ![Screenshot (345)](https://github.com/RahulPorel/Tenzies-Game/assets/98636266/994d5134-7120-4c0b-9056-125721aa2942)
 
 - Printout of Customize Visiting Card
 
