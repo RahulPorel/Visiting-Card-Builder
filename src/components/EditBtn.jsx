@@ -2,7 +2,6 @@ import "../styles/EditorForm.css";
 
 function EditBtn(props) {
   const handleEditBtn = () => {
-
     props.setIsEdit(true);
   };
 
@@ -10,7 +9,7 @@ function EditBtn(props) {
     <div className="edit-button">
       <button className="form--edit" onClick={handleEditBtn}>
         <i className="fa-regular fa-pen-to-square"></i> &nbsp; Edit
-      </button>{" "}
+      </button>
     </div>
   );
 }

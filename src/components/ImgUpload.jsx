@@ -11,6 +11,7 @@ const ImgUpload = (props) => {
   const handleFileChanges = () => {
     setIsStaticImg(!isStaticImg);
   };
+
   return (
     <>
       {!props.clearImg ? (
@@ -20,8 +21,8 @@ const ImgUpload = (props) => {
           {isStaticImg ? (
             <img className="picture-src" src={imgFile} alt="" />
           ) : (
-            <p className="inst-logo" >
-              Your Logo  <br /> or <br /> Profile Photo
+            <p className="inst-logo">
+              Your Logo <br /> or <br /> Profile Photo
             </p>
           )}
         </div>

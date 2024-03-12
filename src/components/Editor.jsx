@@ -35,11 +35,6 @@ export default function Editor() {
           className="form--input"
           name="website"
         />
-
-        {/* <div className="form--marketing">
-          <input id="okayToEmail" type="checkbox" name="joinedNewsLetter" />
-          <label htmlFor="okayToEmail">I want to join the newsletter</label>
-        </div> */}
       </form>
     </div>
   );
