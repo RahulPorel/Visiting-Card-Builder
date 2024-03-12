@@ -42,14 +42,11 @@ export default function App() {
     setRmGuideBtn(true);
   };
 
-
-
   return (
     <>
       {isEdit ? (
-        <div onSubmit={handleSubmit} className="form-container">
-          <form className="form">
-         
+        <div className="form-container">
+          <form className="form" onSubmit={handleSubmit}>
             <Notice />
             <input
               type="text"
@@ -110,7 +107,6 @@ export default function App() {
             rmGuideBtn={rmGuideBtn}
           />
           <EditBtn setIsEdit={setIsEdit} />
-         
         </>
       )}
     </>
