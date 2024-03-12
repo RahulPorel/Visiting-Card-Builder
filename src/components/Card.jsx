@@ -104,7 +104,7 @@ export default function Card(props) {
 
   return (
     <>
-      <div className="center-container cssInp" id="rendering-section">
+      <div className="center-container cssInp" id="pdf">
         <div className="inner-card-container">
           <div className="bizzy-card-container">
             <div className="biz-card-a">
