@@ -39,7 +39,6 @@ export default function Card(props) {
       pdf.addImage(imgData, "PNG", 50, 55);
       pdf.save(`${props.form.name}-visting-card.pdf`);
     });
-    const printNaming = "Printing";
   }
 
   return (
