@@ -41,20 +41,7 @@ export default function Card(props) {
     });
   };
 
-  // const handleDownloadPDF = () => {
-  //   const input = document.querySelector("#rendering-section");
-  //   // Specify the id of the element you want to convert to PDF
 
-  //   html2canvas;
-
-  //   html2canvas(input).then((canvas) => {
-  //     const imgData = canvas.toDataURL("image/png");
-  //     const pdf = new jsPDF();
-  //     pdf.addImage(imgData, "PNG", 0, 0);
-  //     pdf.save("CV.pdf");
-  //     // Specify the name of the downloaded PDF file
-  //   });
-  // };
 
   return (
     <>
