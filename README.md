@@ -15,6 +15,7 @@ Visiting Card Builder let you build visiting card for your bussiness or for pers
 https://rahulporel.github.io/Visiting-Card-Builder/
 
 # Snapshot of Visiting Card Builder
+- PC
 
 - User Interface of Visiting Card Builder
 
