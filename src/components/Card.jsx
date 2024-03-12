@@ -6,7 +6,7 @@ import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import Confetti from "react-confetti";
 import "../index.css";
-import '../styles/EditorForm.css'
+import "../styles/EditorForm.css";
 
 export default function Card(props) {
   const [loadStaticData, setLoadStaticData] = useState(
@@ -55,7 +55,7 @@ export default function Card(props) {
               textAlign: "center",
             }}
           >
-            Thank you for using are service
+            ` Thank you {props.form.name} for using are service`
           </h1>
         ) : (
           ""
