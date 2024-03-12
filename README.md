@@ -40,4 +40,3 @@ Visiting Card Builder let you build visiting card for your bussiness or for pers
  npm run build
 ```
 
-NOTE: After build add dist folder to whatever hosting you are using.
