@@ -15,6 +15,7 @@ Visiting Card Builder let you build visiting card for your bussiness or for pers
 https://rahulporel.github.io/Visiting-Card-Builder/
 
 # Snapshot of Visiting Card Builder
+
 - PC
 
 - User Interface of Visiting Card Builder
@@ -28,6 +29,12 @@ https://rahulporel.github.io/Visiting-Card-Builder/
 - Printout of Customize Visiting Card
 
   ![Screenshot (346)](https://github.com/RahulPorel/Tenzies-Game/assets/98636266/025f84ba-b493-4b62-900f-bda1a07c63ca)
+
+- Mobile
+
+# Note: in mobile there are some known bugs which will be fix soon
+
+![image](https://github.com/RahulPorel/Visiting-Card-Builder/assets/98636266/5d5c21b4-c5de-4e48-9e8f-d0e5648900ce)
 
 ## To run locally
 
