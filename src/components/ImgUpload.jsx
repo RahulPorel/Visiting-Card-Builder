@@ -19,7 +19,7 @@ const ImgUpload = (props) => {
           <input onClick={handleFileChanges} type="file" onChange={getImg} />
 
           {isStaticImg ? (
-            <img className="picture-src" src={imgFile} alt="" />
+            <img className="picture-src" src={imgFile} alt="your-image" />
           ) : (
             <p className="inst-logo">
               Your Logo <br /> or <br /> Profile Photo
