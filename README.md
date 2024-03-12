@@ -14,16 +14,11 @@ Visiting Card Builder let you build visiting card for your bussiness or for pers
 
 # Snapshot of Visiting Card Builder
 
-- Pc
+![Screenshot (344)](https://github.com/RahulPorel/Tenzies-Game/assets/98636266/27930de8-c701-4d62-9304-5ee364f39d62)
 
-![Screenshot](https://github.com/RahulPorel/Tenzies-Game/assets/98636266/e028e2d6-58a5-428a-86d7-4756b6316155)
+![Screenshot (345)](https://github.com/RahulPorel/Tenzies-Game/assets/98636266/994d5134-7120-4c0b-9056-125721aa2942)
 
-![Screenshot](https://github.com/RahulPorel/Tenzies-Game/assets/98636266/ce0f6842-d81b-4851-8885-fbe3e81b7d35)
-![Screenshot](https://github.com/RahulPorel/Tenzies-Game/assets/98636266/65632524-6703-4e9d-a7a1-68027583f36d)
-
-- Mobile
-
-![image](https://github.com/RahulPorel/Tic_Tac_Toe/assets/98636266/79e6b32f-3f8c-4836-8240-17227c083ed3)
+![Screenshot (346)](https://github.com/RahulPorel/Tenzies-Game/assets/98636266/025f84ba-b493-4b62-900f-bda1a07c63ca)
 
 ## To run locally
 
