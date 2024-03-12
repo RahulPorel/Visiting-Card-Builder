@@ -1,7 +1,9 @@
-import { forwardRef, useState } from "react";
+import { useState } from "react";
 import staticData from "./staticData";
 import guideData from "./guideData";
 import ImgUpload from "./ImgUpload";
+import JsPDF from "jspdf";
+
 // import EditBtn from "./EditBtn";
 // import PrintCard from "./PrintCard";
 
@@ -32,30 +34,33 @@ export default function Card(props) {
     setLoadStaticData(true);
   };
 
-  function printThisFuckingCard() {
-    window.frames["print_frame"].document.body.innerHTML =
-      document.getElementById("fuckingCard").innerHTML;
-    window.frames["print_frame"].window.focus();
-    window.frames["print_frame"].window.print();
-  }
+  const generatePDF = () => {
+    const report = new JsPDF("portrait", "pt", "a4");
+    report.html(document.querySelector(".bizzy-card-container")).then(() => {
+      report.save("visiting-card.pdf");
+    });
+  };
+
+  // const handleDownloadPDF = () => {
+  //   const input = document.querySelector("#rendering-section");
+  //   // Specify the id of the element you want to convert to PDF
+
+  //   html2canvas;
+
+  //   html2canvas(input).then((canvas) => {
+  //     const imgData = canvas.toDataURL("image/png");
+  //     const pdf = new jsPDF();
+  //     pdf.addImage(imgData, "PNG", 0, 0);
+  //     pdf.save("CV.pdf");
+  //     // Specify the name of the downloaded PDF file
+  //   });
+  // };
+
   return (
     <>
-      {/* <ReactToPrint
-        trigger={() => {
-          return <button>print</button>;
-        }}
-        content={() => this.componentRef}
-        documentTitle="New document"
-        pageStyle="print"
-      /> */}
-      <iframe
-        name="print_frame"
-        width="0"
-        height="0"
-        frameBorder="0"
-        src="about:blank"
-      ></iframe>
-      <div className="center-container" id="fuckingCard">
+  
+
+      <div className="center-container cssInp" id="rendering-section">
         <div className="inner-card-container">
           <div className="bizzy-card-container">
             <div className="biz-card-a">
@@ -154,18 +159,19 @@ export default function Card(props) {
             </div>
           </div>
         </div>
-        <div className="edit-button-ws">
-          <button className="form--edit" onClick={handleStaticData}>
-            Load Example
-          </button>
+      </div>
 
-          <button className="form--edit" onClick={handleGuideData}>
-            Guide Example
-          </button>
-          <button className="form--edit" onClick={printThisFuckingCard}>
-            Print
-          </button>
-        </div>
+      <div className="edit-button-ws">
+        <button className="form--edit" onClick={handleStaticData}>
+          Load Example
+        </button>
+
+        <button className="form--edit" onClick={handleGuideData}>
+          Guide Example
+        </button>
+        <button className="form--edit" onClick={generatePDF}>
+          Print
+        </button>
       </div>
     </>
   );
