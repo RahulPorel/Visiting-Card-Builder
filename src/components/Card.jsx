@@ -41,12 +41,8 @@ export default function Card(props) {
     });
   };
 
-
-
   return (
     <>
-  
-
       <div className="center-container cssInp" id="rendering-section">
         <div className="inner-card-container">
           <div className="bizzy-card-container">
