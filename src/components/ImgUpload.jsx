@@ -20,15 +20,16 @@ const ImgUpload = (props) => {
           {isStaticImg ? (
             <img className="picture-src" src={imgFile} alt="" />
           ) : (
-            <img
-              className="picture-src"
-              src="/src/components/assests/static_assests/logo_sample.png"
-              alt=""
-            />
+            <p className="inst-logo" >
+              Your Logo  <br /> or <br /> Profile Photo
+            </p>
           )}
         </div>
       ) : (
-        ""
+        <img
+          className="picture-src"
+          src="./assests/static_assests/logo_sample.png"
+        />
       )}
     </>
   );

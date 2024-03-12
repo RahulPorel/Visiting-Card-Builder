@@ -2,7 +2,7 @@ import "../styles/EditorForm.css";
 
 function EditBtn(props) {
   const handleEditBtn = () => {
-    console.log("sdasds");
+
     props.setIsEdit(true);
   };
 

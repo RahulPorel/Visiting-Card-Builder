@@ -40,3 +40,9 @@
   width: 100%;
 }
 /*Profile Pic End*/
+.inst-logo {
+  text-align: center;
+  color: blanchedalmond;
+  font-size: 0.85rem;
+  margin-top: 20px;
+}
