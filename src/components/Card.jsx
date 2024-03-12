@@ -17,8 +17,6 @@ export default function Card(props) {
   const handleStaticData = () => {
     setLoadStaticData(!loadStaticData);
     setLoadGuideData(false);
-    // true
-    // fa
   };
 
   const handleGuideData = () => {
