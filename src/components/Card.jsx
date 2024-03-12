@@ -4,6 +4,7 @@ import guideData from "./guideData";
 import ImgUpload from "./ImgUpload";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+import Confetti from "react-confetti";
 
 export default function Card(props) {
   const [loadStaticData, setLoadStaticData] = useState(
@@ -13,15 +14,18 @@ export default function Card(props) {
     props.clearGuideData ? false : true,
     props.clearStaticData ? true : false
   );
+  const [showConfetti, setShowConfetti] = useState(false);
 
   const handleStaticData = () => {
     setLoadStaticData(!loadStaticData);
     setLoadGuideData(false);
+    setShowConfetti(false);
   };
 
   const handleGuideData = () => {
     setLoadStaticData(true);
     setLoadGuideData(!loadGuideData);
+    setShowConfetti(false);
   };
 
   // convert fucking code to pdf
@@ -32,12 +36,16 @@ export default function Card(props) {
       const imgData = canvas.toDataURL("image/png");
       pdf.addImage(imgData, "PNG", 50, 50);
       pdf.save(`${props.form.name}-visting-card.pdf`);
+      setShowConfetti(!showConfetti);
     });
   }
 
   return (
     <>
+      {showConfetti && <Confetti />}
       <div className="center-container cssInp" id="pdf">
+        {showConfetti ? <h1>Thank you for using are service</h1> : ""}
+
         <div className="inner-card-container">
           <div className="bizzy-card-container">
             <div className="biz-card-a">
