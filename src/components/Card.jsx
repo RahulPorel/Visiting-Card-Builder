@@ -36,7 +36,7 @@ export default function Card(props) {
     html2canvas(element).then((canvas) => {
       const pdf = new jsPDF();
       const imgData = canvas.toDataURL("image/png");
-      pdf.addImage(imgData, "PNG", 50, 55);
+      pdf.addImage(imgData, "PNG", 50, 50);
       pdf.save(`${props.form.name}-visting-card.pdf`);
     });
   }
