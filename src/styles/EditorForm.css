@@ -87,6 +87,9 @@
   margin-top: 50vh;
   margin-left: 40vh;
 }
+/* .edit-button:hover {
+  background-color: #59e391;
+} */
 .edit-button-ws {
   margin-top: 15px;
   display: flex;
@@ -95,6 +98,7 @@
   justify-content: center;
   gap: 12px;
 }
+
 @media screen and (max-width: 470px) {
   .edit-button {
     margin-top: 60px;
