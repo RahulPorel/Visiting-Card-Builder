@@ -127,31 +127,6 @@ a {
   margin-left: 25px;
 }
 
-/* .biz-email:before,
-.biz-cell:before,
-.biz-portfolio:before {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 24px;
-  float: left;
-  margin: -7px 9px 0 0;
-}
-
-.biz-email:before {
-  background: url("https://drewgoff.com/images/business-card/email.svg")
-    no-repeat;
-}
-.biz-cell:before {
-  background: url("https://drewgoff.com/images/business-card/cellphone.svg")
-    no-repeat;
-}
-.biz-portfolio:before {
-  background: url("https://drewgoff.com/images/business-card/suitcase.svg")
-    no-repeat;
-}
-*/
-
 /*=============================
 	 Business Card Mobile
 ===============================*/
