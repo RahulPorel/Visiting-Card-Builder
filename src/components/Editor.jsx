@@ -1,9 +1,7 @@
-
 export default function Editor() {
   return (
     <div className="form-container">
       <form className="form">
-        
         <input
           type="text"
           placeholder="Your Name"
