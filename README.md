@@ -18,7 +18,8 @@ Visiting Card Builder let you build visiting card for your bussiness or for pers
 
 ![Screenshot (345)](https://github.com/RahulPorel/Tenzies-Game/assets/98636266/994d5134-7120-4c0b-9056-125721aa2942)
 
-![Screenshot (346)](https://github.com/RahulPorel/Tenzies-Game/assets/98636266/025f84ba-b493-4b62-900f-bda1a07c63ca)
+- Printout of Customize Visiting Card
+  ![Screenshot (346)](https://github.com/RahulPorel/Tenzies-Game/assets/98636266/025f84ba-b493-4b62-900f-bda1a07c63ca)
 
 ## To run locally
 
@@ -39,4 +40,3 @@ Visiting Card Builder let you build visiting card for your bussiness or for pers
 ```npm
  npm run build
 ```
-
