@@ -1,4 +1,3 @@
-import Notice from "./Notice";
 
 export default function Editor() {
   return (

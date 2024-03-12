@@ -11,7 +11,7 @@ const ImgUpload = (props) => {
   const handleFileChanges = () => {
     setIsStaticImg(!isStaticImg);
   };
-
+  console.log(props.clearImg);
   return (
     <>
       {!props.clearImg ? (
