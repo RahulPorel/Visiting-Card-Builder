@@ -22,7 +22,7 @@ const ImgUpload = (props) => {
             <img className="picture-src" src={imgFile} alt="your-image" />
           ) : (
             <p className="inst-logo">
-              Your Logo <br /> or <br /> Profile Photo
+              <b> Your Logo </b> <br /> or <br /> <b> Profile Photo </b>
             </p>
           )}
         </div>
