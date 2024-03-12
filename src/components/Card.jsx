@@ -30,14 +30,16 @@ export default function Card(props) {
     setLoadStaticData(true);
   };
 
+  // convert fucking code to pdf
   function genPDF() {
     const element = document.querySelector("#pdf");
     html2canvas(element).then((canvas) => {
       const pdf = new jsPDF();
       const imgData = canvas.toDataURL("image/png");
-      pdf.addImage(imgData, "PNG", 30, 100);
+      pdf.addImage(imgData, "PNG", 50, 55);
       pdf.save(`${props.form.name}-visting-card.pdf`);
     });
+    const printNaming = "Printing";
   }
 
   return (
@@ -148,11 +150,11 @@ export default function Card(props) {
 
       <div className="edit-button-ws">
         <button className="form--edit" onClick={handleStaticData}>
-          Load Example
+          {loadStaticData ? "Load Example" : "Clear Example"}
         </button>
 
         <button className="form--edit" onClick={handleGuideData}>
-          Guide Example
+          {!loadGuideData ? "Load Instruction" : "Clear Instruction"}
         </button>
         <button className="form--edit" onClick={genPDF}>
           Print
@@ -161,3 +163,7 @@ export default function Card(props) {
     </>
   );
 }
+
+// TODO:
+// 1 add color pallete
+// 2. add diffrent styles
