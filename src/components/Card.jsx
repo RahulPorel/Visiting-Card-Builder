@@ -5,7 +5,6 @@ import ImgUpload from "./ImgUpload";
 // import EditBtn from "./EditBtn";
 // import PrintCard from "./PrintCard";
 
-
 // import GuideImg from "./GuideImg";
 
 export default function Card(props) {
@@ -167,7 +166,7 @@ export default function Card(props) {
             Print
           </button>
         </div>
-      </div>{" "}
+      </div>
     </>
   );
 }
