@@ -5,8 +5,6 @@ import EditBtn from "./components/EditBtn";
 import Notice from "./components/Notice";
 import "./index.css";
 
-// import ImgUpload from "./components/ImgUpload";
-
 export default function App() {
   const [form, setForm] = useState({
     name: "",
