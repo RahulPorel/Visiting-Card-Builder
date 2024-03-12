@@ -44,7 +44,19 @@ export default function Card(props) {
     <>
       {showConfetti && <Confetti />}
       <div className="center-container cssInp" id="pdf">
-        {showConfetti ? <h1>Thank you for using are service</h1> : ""}
+        {showConfetti ? (
+          <h1
+            style={{
+              fontSize: "15px",
+              color: "aliceblue",
+              textAlign: "center",
+            }}
+          >
+            Thank you for using are service
+          </h1>
+        ) : (
+          ""
+        )}
 
         <div className="inner-card-container">
           <div className="bizzy-card-container">
