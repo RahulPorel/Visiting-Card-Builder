@@ -3,11 +3,12 @@ import Card from "./components/Card";
 import "./styles/EditorForm.css";
 import EditBtn from "./components/EditBtn";
 import Notice from "./components/Notice";
+import "./index.css";
+
 // import ImgUpload from "./components/ImgUpload";
 
 export default function App() {
   const [form, setForm] = useState({
-    photo: "/src/components/assests/static_assests/20240226_192140.jpg",
     name: "",
     proffession: "",
     email: "",

@@ -1,15 +1,7 @@
-:root {
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 body {
-  background-color: #4a4a4d;
+  background-color: #8d7979;
   font-family: "Poppins", sans-serif;
 
-  font-weight: 300;
   font-size: 16px;
 }
 
@@ -17,9 +9,9 @@ a {
   font-family: "Poppins", sans-serif;
 
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-weight: 500;
-  font-size: 0.5rem;
+  font-size: 0.78rem;
 }
 
 /*=============================
@@ -51,7 +43,7 @@ a {
 	     Left Content
 ===============================*/
 .biz-card-a {
-  width: 160px;
+  width: 165px;
   height: 220px;
   background-color: #f2f2f2;
   float: left;
@@ -61,25 +53,8 @@ a {
   border-bottom-left-radius: 18px;
 }
 
-/* .biz-headshot {
-  width: 120px;
-  height: 120px;
-  border-radius: 120px;
-  background-size: 132px;
-  background-repeat: no-repeat;
-  background-position: 50% 6%;
-
-  margin-top: 25px;
-  margin-left: auto;
-  margin-right: auto;
-} */
-
-/* .biz-pic-drew {
-  background-image: url("https://drewgoff.com/images/business-card/drew-biz.jpg");
-} */
-
 .biz-words-container {
-  margin-top: 100px;
+  margin-top: 95px;
 }
 
 .biz-name {
@@ -88,7 +63,7 @@ a {
   color: #252526;
   font-size: 1.25rem;
 
-  margin-top: -4em;
+  margin-top: -3.5em;
 }
 
 .biz-title {
@@ -97,7 +72,6 @@ a {
   color: #252526;
   font-size: 0.85rem;
   font-weight: 390;
-  max-width: 200px;
 }
 
 /*=============================
@@ -118,7 +92,8 @@ a {
 
 .biz-shape {
   float: right;
-  background: #ff4d79;
+  /* background: #ff4d79; */
+
   background: -webkit-linear-gradient(-45deg, #ff4d79 0%, #ea2e6d 100%);
   background: -ms-linear-gradient(-45deg, #ff4d79 0%, #ea2e6d 100%);
   background: linear-gradient(135deg, #ff4d79 0%, #ea2e6d 100%);
@@ -129,8 +104,8 @@ a {
   margin: -25px -55px 0 0;
   border-radius: 50px;
   width: 100%;
-  color: #fff;
-  border: 2px solid #fff;
+  color: #000000;
+  border: 2px solid #ffffff;
 }
 
 .biz-contact-box {
@@ -141,7 +116,19 @@ a {
   transform: scaleX(1) rotate(-50deg);
 }
 
-.biz-email:before,
+.fa-chrome,
+.fa-envelope,
+.fa-phone {
+  margin: 10px 15px;
+
+  font-size: 18px;
+  color: rgb(15, 22, 26);
+}
+.email-clas {
+  margin-left: 25px;
+}
+
+/* .biz-email:before,
 .biz-cell:before,
 .biz-portfolio:before {
   content: "";
@@ -164,20 +151,7 @@ a {
   background: url("https://drewgoff.com/images/business-card/suitcase.svg")
     no-repeat;
 }
-
-.biz-email,
-.biz-cell,
-.biz-portfolio {
-  color: #252526;
-  font-size: 11px;
-  letter-spacing: 0.15rem;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  cursor: pointer;
-  padding-top: 5px;
-  font-family: "Nunito", sans-serif;
-  font-weight: 500;
-}
+*/
 
 /*=============================
 	 Business Card Mobile

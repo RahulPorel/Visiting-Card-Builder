@@ -3,9 +3,6 @@ import staticData from "./staticData";
 import guideData from "./guideData";
 import ImgUpload from "./ImgUpload";
 import html2canvas from "html2canvas";
-import "../styles/EditorForm.css";
-import "../styles/ImgUpload.css";
-import "../index.css";
 import jsPDF from "jspdf";
 
 // import EditBtn from "./EditBtn";
@@ -14,11 +11,6 @@ import jsPDF from "jspdf";
 // import GuideImg from "./GuideImg";
 
 export default function Card(props) {
-  // const handlePrint = (e) => {
-  //   e.preventDefault();
-  //   window.print();
-  // };
-
   const [loadStaticData, setLoadStaticData] = useState(
     props.clearStaticData ? true : false
   );
@@ -34,78 +26,27 @@ export default function Card(props) {
 
   const handleGuideData = () => {
     setLoadGuideData(!loadGuideData);
-    // console.log(setLoadGuideData(!loadGuideData));
+
     setLoadStaticData(true);
   };
 
-  // const generatePDF = () => {
-  //   // const report = new JsPDF("p", "pt", "a4");
-  //   // report.html(document.querySelector(".inner-card-container")).then(() => {
-  //   //   report.save("visiting-card.pdf");
-  //   // });
+  function genPDF() {
+    const element = document.querySelector("#pdf");
+    html2canvas(element).then((canvas) => {
+      const pdf = new jsPDF();
 
-  //   var pdf = new jsPDF("p", "pt", "letter");
-  //   pdf.addHTML(
-  //     document.querySelector(".inner-card-container")[0],
-  //     function () {
-  //       pdf.save("Test.pdf");
-  //     }
-  //   );
-  // };
-
-  // function generatePdf() {
-  //   let jsPdf = new jsPDF("p", "pt", "letter");
-  //   var htmlElement = document.getElementById("rendering-section");
-  //   // you need to load html2canvas (and dompurify if you pass a string to html)
-  //   const opt = {
-  //     callback: function (jsPdf) {
-  //       jsPdf.save("Test.pdf");
-  //       // to open the generated PDF in browser window
-  //       // window.open(jsPdf.output('bloburl'));
-  //     },
-  //     margin: [72, 72, 72, 72],
-  //     autoPaging: "text",
-  //     html2canvas: {
-  //       allowTaint: true,
-  //       dpi: 300,
-  //       letterRendering: true,
-  //       logging: false,
-  //       scale: 0.8,
-  //     },
-  //   };
-  // }
-
-  const printPDF = () => {
-    const domElement = document.getElementById("rendering-section");
-    html2canvas(domElement, {
-      onclone: (document) => {
-        document.getElementById("print").style.visibility = "hidden";
-      },
-    }).then((canvas) => {
       const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPdf();
-      pdf.addImage(imgData, "JPEG", 10, 10);
-      pdf.save(`${new Date().toISOString()}.pdf`);
-    });
 
-    return (
-      <div className="App">
-        <h1>Generate PDF</h1>
-        <p>Create a screenshot from the page, and put it in a PDF file.</p>
-        <p style={{ color: "red" }}>
-          *Open this page in new window and press the button.
-        </p>
-        <button id="print" onClick={printPDF}>
-          PRINT
-        </button>
-      </div>
-    );
-  };
+      pdf.addImage(imgData, "PNG", 0, 0);
+
+      pdf.save("download.pdf");
+    });
+  }
 
   return (
     <>
-      <div className="center-container cssInp" id="pdf">
-        <div className="inner-card-container">
+      <div className="center-container cssInp">
+        <div className="inner-card-container" id="pdf">
           <div className="bizzy-card-container">
             <div className="biz-card-a">
               <div className="biz-headshot biz-pic-drew">
@@ -147,6 +88,7 @@ export default function Card(props) {
               <div className="biz-shape">
                 <div className="biz-contact-box">
                   <div className="biz-email">
+                    <i className="fa-solid fa-envelope"></i>
                     {loadStaticData ? (
                       <a href={props.form.email}>{props.form.email}</a>
                     ) : (
@@ -164,6 +106,7 @@ export default function Card(props) {
                   </div>
 
                   <div className="biz-cell">
+                    <i className="fa-solid fa-phone"></i>
                     {loadStaticData ? (
                       <a href={props.form.phone_no}>{props.form.phone_no}</a>
                     ) : (
@@ -181,6 +124,7 @@ export default function Card(props) {
                   </div>
 
                   <div className="biz-portfolio">
+                    <i className="fa-brands fa-chrome"></i>
                     {loadStaticData ? (
                       <a target="_blank" href={props.form.website}>
                         {props.form.website}
@@ -213,7 +157,7 @@ export default function Card(props) {
         <button className="form--edit" onClick={handleGuideData}>
           Guide Example
         </button>
-        <button className="form--edit" onClick={printPDF}>
+        <button className="form--edit" onClick={genPDF}>
           Print
         </button>
       </div>
