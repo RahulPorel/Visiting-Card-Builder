@@ -1,9 +1,10 @@
-
+import Notice from "./Notice";
 
 export default function Editor() {
   return (
     <div className="form-container">
       <form className="form">
+        
         <input
           type="text"
           placeholder="Your Name"
@@ -40,7 +41,6 @@ export default function Editor() {
           <input id="okayToEmail" type="checkbox" name="joinedNewsLetter" />
           <label htmlFor="okayToEmail">I want to join the newsletter</label>
         </div> */}
-        <button className="form--submit">Save</button>
       </form>
     </div>
   );
