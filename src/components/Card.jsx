@@ -22,8 +22,6 @@ export default function Card(props) {
   const handleGuideData = () => {
     setLoadStaticData(true);
     setLoadGuideData(!loadGuideData);
-    console.log("prop");
-    console.log(props.isEdit);
   };
 
   // convert fucking code to pdf
