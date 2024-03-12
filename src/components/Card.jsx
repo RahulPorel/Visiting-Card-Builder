@@ -34,19 +34,16 @@ export default function Card(props) {
     const element = document.querySelector("#pdf");
     html2canvas(element).then((canvas) => {
       const pdf = new jsPDF();
-
       const imgData = canvas.toDataURL("image/png");
-
-      pdf.addImage(imgData, "PNG", 0, 0);
-
-      pdf.save("download.pdf");
+      pdf.addImage(imgData, "PNG", 30, 100);
+      pdf.save(`${props.form.name}-visting-card.pdf`);
     });
   }
 
   return (
     <>
-      <div className="center-container cssInp">
-        <div className="inner-card-container" id="pdf">
+      <div className="center-container cssInp" id="pdf">
+        <div className="inner-card-container">
           <div className="bizzy-card-container">
             <div className="biz-card-a">
               <div className="biz-headshot biz-pic-drew">
