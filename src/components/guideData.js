@@ -1,6 +1,7 @@
+// guideDb that will show on click page
+
 const guideData = {
   guidedData: {
-    img: "",
     name: "Your Name",
     proffession: "Your proffession",
     email: "Your mail id",
