@@ -12,8 +12,6 @@ Visiting Card Builder let you build visiting card for your bussiness or for pers
 
 # Live Demo 👁️
 
-- Netlify🔗: [Click to view site](https://tenzis-game-rahulporel.netlify.app/)
-
 # Snapshot of Visiting Card Builder
 
 - Pc
