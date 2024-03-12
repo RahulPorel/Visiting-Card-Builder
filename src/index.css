@@ -92,7 +92,7 @@ a {
 
 .biz-shape {
   float: right;
-  /* background: #ff4d79; */
+  background: #ff4d79;
 
   background: -webkit-linear-gradient(-45deg, #ff4d79 0%, #ea2e6d 100%);
   background: -ms-linear-gradient(-45deg, #ff4d79 0%, #ea2e6d 100%);
@@ -120,7 +120,6 @@ a {
 .fa-envelope,
 .fa-phone {
   margin: 10px 15px;
-
   font-size: 18px;
   color: rgb(15, 22, 26);
 }
