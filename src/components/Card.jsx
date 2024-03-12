@@ -5,6 +5,8 @@ import ImgUpload from "./ImgUpload";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import Confetti from "react-confetti";
+import "../index.css";
+import '../styles/EditorForm.css'
 
 export default function Card(props) {
   const [loadStaticData, setLoadStaticData] = useState(
@@ -45,7 +47,8 @@ export default function Card(props) {
       {showConfetti && <Confetti />}
       <div className="center-container cssInp" id="pdf">
         {showConfetti ? (
-          <h1 className="gradient-text"
+          <h1
+            className="gradient-text"
             style={{
               fontSize: "15px",
               color: "aliceblue",
