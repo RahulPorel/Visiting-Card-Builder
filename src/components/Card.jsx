@@ -45,7 +45,7 @@ export default function Card(props) {
       {showConfetti && <Confetti />}
       <div className="center-container cssInp" id="pdf">
         {showConfetti ? (
-          <h1
+          <h1 className="gradient-text"
             style={{
               fontSize: "15px",
               color: "aliceblue",
