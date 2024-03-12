@@ -1,3 +1,5 @@
+// staticDb that will show on every page load by default
+
 const staticData = {
   perosnalInfo: {
     name: "Rahul Porel",
