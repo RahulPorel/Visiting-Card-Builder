@@ -20,6 +20,7 @@ export default function App() {
   const [clearStaticData, setClearStaticData] = useState(false);
   const [clearGuideData, setclearGuideData] = useState(true);
   const [clearImg, setClearImg] = useState(false);
+  const [rmGuideBtn, setRmGuideBtn] = useState(false);
 
   const handleChange = (e) => {
     setForm((prevFormData) => {
@@ -38,6 +39,7 @@ export default function App() {
     setIsEdit(false);
     setClearStaticData(true);
     setclearGuideData(true);
+    setRmGuideBtn(true);
     // setClearImg(true);
   };
 
@@ -57,7 +59,7 @@ export default function App() {
         <div onSubmit={handleSubmit} className="form-container">
           <form className="form">
             {/* <input onClick={handleFileChanges} type="file" onChange={getImg} /> */}
-            <Notice />
+            <Notice  />
             <input
               type="text"
               placeholder="Your Name"
@@ -101,10 +103,6 @@ export default function App() {
               name="website"
             />
 
-            {/* <div className="form--marketing">
-          <input id="okayToEmail" type="checkbox" name="joinedNewsLetter" />
-          <label htmlFor="okayToEmail">I want to join the newsletter</label>
-        </div> */}
             <button className="form--submit" onClick={handlePreview}>
               Preview
             </button>
@@ -117,6 +115,8 @@ export default function App() {
             clearStaticData={clearStaticData}
             clearGuideData={clearGuideData}
             clearImg={clearImg}
+            isEdit={isEdit}
+            rmGuideBtn={rmGuideBtn}
           />
           <EditBtn setIsEdit={setIsEdit} />
           {/* <button className="form--edit" onClick={() => setIsEdit(true)}>

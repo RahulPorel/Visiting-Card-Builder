@@ -5,29 +5,27 @@ import ImgUpload from "./ImgUpload";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
-// import EditBtn from "./EditBtn";
-// import PrintCard from "./PrintCard";
-
-// import GuideImg from "./GuideImg";
-
 export default function Card(props) {
   const [loadStaticData, setLoadStaticData] = useState(
     props.clearStaticData ? true : false
   );
   const [loadGuideData, setLoadGuideData] = useState(
-    props.clearGuideData ? false : true
-    // props.clearStaticData ? true : false
+    props.clearGuideData ? false : true,
+    props.clearStaticData ? true : false
   );
 
   const handleStaticData = () => {
     setLoadStaticData(!loadStaticData);
     setLoadGuideData(false);
+    // true
+    // fa
   };
 
   const handleGuideData = () => {
-    setLoadGuideData(!loadGuideData);
-
     setLoadStaticData(true);
+    setLoadGuideData(!loadGuideData);
+    console.log("prop");
+    console.log(props.isEdit);
   };
 
   // convert fucking code to pdf
@@ -152,9 +150,14 @@ export default function Card(props) {
           {loadStaticData ? "Load Example" : "Clear Example"}
         </button>
 
-        <button className="form--edit" onClick={handleGuideData}>
-          {!loadGuideData ? "Load Instruction" : "Clear Instruction"}
-        </button>
+        {props.rmGuideBtn ? (
+          ""
+        ) : (
+          <button className="form--edit" onClick={handleGuideData}>
+            {!loadGuideData ? "Load Instruction" : "Clear Instruction"}
+          </button>
+        )}
+
         <button className="form--edit" onClick={genPDF}>
           Print
         </button>

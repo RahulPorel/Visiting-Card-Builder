@@ -1,7 +1,9 @@
-
-
 function Notice() {
-  return <p>Notice: Click on Profile Logo to add image </p>;
+  return (
+    <p style={{ fontSize: "10px", fontWeight: "600" }}>
+      Note: Logo can be add by clicking logo icon{" "}
+    </p>
+  );
 }
 
 export default Notice;
