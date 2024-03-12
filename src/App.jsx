@@ -59,7 +59,7 @@ export default function App() {
         <div onSubmit={handleSubmit} className="form-container">
           <form className="form">
             {/* <input onClick={handleFileChanges} type="file" onChange={getImg} /> */}
-            <Notice  />
+            <Notice />
             <input
               type="text"
               placeholder="Your Name"
@@ -119,9 +119,7 @@ export default function App() {
             rmGuideBtn={rmGuideBtn}
           />
           <EditBtn setIsEdit={setIsEdit} />
-          {/* <button className="form--edit" onClick={() => setIsEdit(true)}>
-            <i className="fa-regular fa-pen-to-square"></i> &nbsp; Edit
-          </button> */}
+         
         </>
       )}
     </>
