@@ -25,7 +25,7 @@ Visiting Card Builder let you build visiting card for your bussiness or for pers
 #### 01. Install node dependices
 
 ```npm
- npm install
+ npm i
 ```
 
 #### 02. Run project in localhost
