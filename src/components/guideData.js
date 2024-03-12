@@ -1,4 +1,4 @@
-export const guideData = {
+const guideData = {
   guidedData: {
     img: "",
     name: "Your Name",
@@ -9,3 +9,4 @@ export const guideData = {
     isGuide: true,
   },
 };
+export default guideData;
