@@ -184,22 +184,10 @@ export default function Card(props) {
 
       <div className="button" id="button-7" onClick={genPDF}>
         <div id="dub-arrow">
-          {/* <img
-      
-            src="https://github.com/atloomer/atloomer.github.io/blob/master/img/iconmonstr-arrow-48-240.png?raw=true"
-            alt=""
-          /> */}
           <i className="fa-solid fa-print"></i>
         </div>
-        <button className="print-btn rm-default-btn-styles" href="#">
-          {" "}
-          Print
-        </button>
+        <button className="print-btn rm-default-btn-styles">Print</button>
       </div>
-
-      {/* <button className="form--edit rm-default-btn-styles" onClick={genPDF}>
-        Print
-      </button> */}
     </>
   );
 }
