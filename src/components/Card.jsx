@@ -171,9 +171,7 @@ export default function Card(props) {
         </button>
       </div>
 
-      {/* <button className="form--edit " onClick={handleStaticData}>
-        {loadStaticData ? "Load Example" : "Clear Example"}
-      </button> */}
+     
 
       {props.rmGuideBtn ? (
         ""
