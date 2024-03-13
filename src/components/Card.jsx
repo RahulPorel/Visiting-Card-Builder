@@ -163,40 +163,42 @@ export default function Card(props) {
           </div>
         </div>
       </div>
+      <div className="wrap-btn">
+        <div className="upper-container">
+          {/* loadex btn */}
+          <div className="button" id="button-2" onClick={handleStaticData}>
+            <div id="slide"></div>
+            <button className="instructed-btn rm-default-btn-styles">
+              {loadStaticData ? "Load Example" : "Clear Example"}
+            </button>
+          </div>
 
-      <div className="button" id="button-2" onClick={handleStaticData}>
-        <div id="slide"></div>
-        <button className="instructed-btn rm-default-btn-styles">
-          {loadStaticData ? "Load Example" : "Clear Example"}
-        </button>
-      </div>
-
-      {props.rmGuideBtn ? (
-        ""
-      ) : (
-        <div className="button" id="button-2" onClick={handleGuideData}>
-          <div id="slide"></div>
-          <button className="instructed-btn rm-default-btn-styles">
-            {!loadGuideData ? "Load Instruction" : "Clear Instruction"}
-          </button>
+          <div className="uper-container">
+            {/* Instruction btn */}
+            {props.rmGuideBtn ? (
+              ""
+            ) : (
+              <div className="button" id="button-2" onClick={handleGuideData}>
+                <div id="slide"></div>
+                <button className="instructed-btn rm-default-btn-styles">
+                  {!loadGuideData ? "Load Instruction" : "Clear Instruction"}
+                </button>
+              </div>
+            )}
+          </div>
         </div>
-      )}
-
-      <div className="button" id="button-7" onClick={genPDF}>
-        <div id="dub-arrow">
-          <i className="fa-solid fa-print"></i>
+        <div className="upper-container">
+          {/* printPdf btn */}
+          <div className="button" id="button-7" onClick={genPDF}>
+            <div id="dub-arrow">
+              <i className="fa-solid fa-print"></i>
+            </div>
+            <button className="print-btn rm-default-btn-styles">Print</button>
+          </div>
         </div>
-        <button className="print-btn rm-default-btn-styles">Print</button>
       </div>
     </>
   );
-}
-
-{
-  /* <div class="button" id="button-2">
-<div id="slide"></div>
-<a href="#">Let's Go!</a>
-</div> */
 }
 
 // TODO:
