@@ -17,7 +17,6 @@ export default function App() {
   const [isEdit, setIsEdit] = useState(false);
   const [clearStaticData, setClearStaticData] = useState(false);
   const [clearGuideData, setclearGuideData] = useState(true);
-  const [clearImg, setClearImg] = useState(false);
   const [rmGuideBtn, setRmGuideBtn] = useState(false);
 
   const handleChange = (e) => {
@@ -35,9 +34,9 @@ export default function App() {
 
   const handlePreview = () => {
     setIsEdit(false);
+    setRmGuideBtn(true);
     setClearStaticData(true);
     setclearGuideData(true);
-    setRmGuideBtn(true);
   };
 
   return (
@@ -101,10 +100,6 @@ export default function App() {
                 Preview
               </button>
             </div>
-
-            {/* <button className="form--submit" onClick={handlePreview}>
-              Preview
-            </button> */}
           </form>
         </div>
       ) : (
@@ -113,7 +108,6 @@ export default function App() {
             form={form}
             clearStaticData={clearStaticData}
             clearGuideData={clearGuideData}
-            clearImg={clearImg}
             isEdit={isEdit}
             rmGuideBtn={rmGuideBtn}
           />
