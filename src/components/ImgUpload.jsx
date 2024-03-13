@@ -12,25 +12,20 @@ const ImgUpload = (props) => {
     setIsStaticImg(!isStaticImg);
   };
 
+  console.log(isStaticImg);
+
   return (
     <>
       {!props.clearImg ? (
         <div className="picture">
           <input onClick={handleFileChanges} type="file" onChange={getImg} />
-
-          {isStaticImg ? (
-            <img className="picture-src" src={imgFile} alt="your-image" />
-          ) : (
-            <p className="inst-logo">
-              <b> Your Logo </b> <br /> or <br /> <b> Profile Photo </b>
-            </p>
-          )}
+          <img className="picture-src" src={imgFile} />
+          <p className="inst-logo">
+            Your Logo <br /> or <br /> Profile Photo
+          </p>
         </div>
       ) : (
-        <img
-          className="picture-src"
-          src="./assests/static_assests/logo_sample.png"
-        />
+        ""
       )}
     </>
   );
