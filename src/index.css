@@ -135,13 +135,12 @@ a {
 @media screen and (max-width: 470px) {
   .biz-card-a,
   .biz-card-b {
-    margin-left: 20%;
+    margin-left: 20.5%;
   }
 
   .biz-title {
     text-align: center;
     align-items: center;
-    margin-left: 6.15em;
   }
 
   .biz-card-a {
