@@ -171,8 +171,6 @@ export default function Card(props) {
         </button>
       </div>
 
-     
-
       {props.rmGuideBtn ? (
         ""
       ) : (
