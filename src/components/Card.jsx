@@ -225,7 +225,7 @@ export default function Card(props) {
               {/* copy btn */}
               <div className="button" id="button-7" onClick={copyToClip}>
                 <div id="dub-arrow">
-                  <i className="fa-solid fa-print"></i>
+                  <i className="fa-solid fa-copy"></i>
                 </div>
                 <button className="print-btn rm-default-btn-styles">
                   Copy
