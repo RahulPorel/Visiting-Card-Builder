@@ -6,9 +6,11 @@ function EditBtn(props) {
   };
 
   return (
-    <div className="edit-button">
-      <button className="form--edit" onClick={handleEditBtn}>
-        <i className="fa-regular fa-pen-to-square"></i> &nbsp; Edit Card
+    <div className="button" id="button-3" onClick={handleEditBtn}>
+      <div id="circle"></div>
+      <button className="edit-card-btn">
+        <i className="fa-regular fa-pen-to-square"></i>
+        Edit Card
       </button>
     </div>
   );

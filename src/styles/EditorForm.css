@@ -179,3 +179,70 @@
     background-size: 650%;
   }
 }
+
+.button {
+  display: inline-flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #bfc0c0;
+  margin: 20px 20px 20px 20px;
+  color: #d6e4e4;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.9em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.edit-card-btn {
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* Third Button */
+
+#button-3 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#button-3 .edit-card-btn {
+  position: relative;
+  transition: all 0.45s ease-Out;
+}
+
+#circle {
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  line-height: 40px;
+  border-radius: 50%;
+  background: #bfc0c0;
+  position: absolute;
+  transition: all 0.5s ease-Out;
+  top: 20px;
+  left: 70px;
+}
+
+#button-3:hover #circle {
+  width: 200%;
+  height: 500%;
+  opacity: 1;
+  top: -70px;
+  left: -70px;
+}
+
+#button-3:hover .edit-card-btn {
+  color: #2d3142;
+}
