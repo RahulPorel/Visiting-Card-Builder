@@ -14,12 +14,11 @@ export default function App() {
     website: "",
   });
   const nameRef = useRef(null),
-    proffessionRed = useRef(null),
+    proffessionRef = useRef(null),
     emailRef = useRef(null),
     noRef = useRef(null),
     websiteRef = useRef(null);
 
-    
   const [isEdit, setIsEdit] = useState(false);
   const [clearStaticData, setClearStaticData] = useState(false);
   const [clearGuideData, setclearGuideData] = useState(true);
@@ -58,7 +57,7 @@ export default function App() {
               className="form--input"
               name="name"
               value={form.name}
-              ref={textRef}
+              ref={nameRef}
             />
 
             <input
@@ -67,6 +66,7 @@ export default function App() {
               onChange={handleChange}
               className="form--input"
               value={form.proffession}
+              ref={proffessionRef}
               name="proffession"
             />
 
@@ -77,6 +77,7 @@ export default function App() {
               className="form--input"
               value={form.email}
               name="email"
+              ref={emailRef}
             />
             <input
               type="text"
@@ -85,6 +86,7 @@ export default function App() {
               className="form--input"
               value={form.phone_no}
               name="phone_no"
+              ref={noRef}
             />
             <input
               type="text"
@@ -93,6 +95,7 @@ export default function App() {
               className="form--input"
               value={form.website}
               name="website"
+              ref={websiteRef}
             />
 
             <div
@@ -117,7 +120,11 @@ export default function App() {
             clearGuideData={clearGuideData}
             isEdit={isEdit}
             rmGuideBtn={rmGuideBtn}
-            textRef={textRef}
+            nameRef={nameRef}
+            proffessionRef={proffessionRef}
+            emailRef={emailRef}
+            noRef={noRef}
+            websiteRef={websiteRef}
           />
           <EditBtn setIsEdit={setIsEdit} />
         </>

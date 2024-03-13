@@ -23,10 +23,17 @@ export default function Card(props) {
   );
 
   const copyToClip = useCallback(() => {
-    props.textRef.current?.select();
-    props.textRef.current?.setSelectionRange(0, 99);
-    window.navigator.clipboard.writeText(`Name: ${props.form.name}`);
-  }, [`Name: ${props.form.name}`]);
+    props.nameRef.current?.select(), props.proffessionRef.current?.select();
+    props.emailRef.current?.select();
+    props.noRef.current?.select();
+    props.websiteRef.current?.select();
+
+    window.navigator.clipboard.writeText(
+      ` Name: ${props.form.name} \n Profession: ${props.form.proffession} \n Email-Id: ${props.form.email} \n Phone-No: ${props.form.phone_no} \n Website-Url: ${props.form.website}`
+    );
+  }, [
+    `Name: ${props.form.name}   Proffession: ${props.form.proffession}  Email ID: ${props.form.email} Phone-no: ${props.form.phone_no} Website-URL: ${props.form.website}`,
+  ]);
 
   useEffect(() => {
     window
