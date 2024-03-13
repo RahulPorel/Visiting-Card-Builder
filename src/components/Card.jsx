@@ -164,6 +164,10 @@ export default function Card(props) {
         </div>
       </div>
 
+
+
+
+
       <div className="edit-button-ws">
         <button className="form--edit " onClick={handleStaticData}>
           {loadStaticData ? "Load Example" : "Clear Example"}
@@ -172,10 +176,6 @@ export default function Card(props) {
         {props.rmGuideBtn ? (
           ""
         ) : (
-          // <button className="form--edit" onClick={handleGuideData}>
-          //   {!loadGuideData ? "Load Instruction" : "Clear Instruction"}
-          // </button>
-
           <div className="button" id="button-2" onClick={handleGuideData}>
             <div id="slide"></div>
             <button className="instructed-btn rm-default-btn-styles">
