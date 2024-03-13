@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import staticData from "./staticData";
 import guideData from "./guideData";
 import ImgUpload from "./ImgUpload";
@@ -21,6 +21,12 @@ export default function Card(props) {
   const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 480px)").matches
   );
+
+  const copyToClip = useCallback(() => {
+    props.textRef.current?.select();
+    props.textRef.current?.setSelectionRange(0, 99);
+    window.navigator.clipboard.writeText(`Name: ${props.form.name}`);
+  }, [`Name: ${props.form.name}`]);
 
   useEffect(() => {
     window
@@ -197,7 +203,6 @@ export default function Card(props) {
                 </div>
               )}
             </div>
-
             <div className="upper-container">
               {/* printPdf btn */}
               <div className="button" id="button-7" onClick={genPDF}>
@@ -206,6 +211,17 @@ export default function Card(props) {
                 </div>
                 <button className="print-btn rm-default-btn-styles">
                   Print
+                </button>
+              </div>
+            </div>{" "}
+            <div className="upper-container">
+              {/* copy btn */}
+              <div className="button" id="button-7" onClick={copyToClip}>
+                <div id="dub-arrow">
+                  <i className="fa-solid fa-print"></i>
+                </div>
+                <button className="print-btn rm-default-btn-styles">
+                  Copy
                 </button>
               </div>
             </div>

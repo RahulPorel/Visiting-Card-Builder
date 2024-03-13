@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Card from "./components/Card";
 import "./styles/EditorForm.css";
 import EditBtn from "./components/EditBtn";
@@ -13,7 +13,13 @@ export default function App() {
     phone_no: "",
     website: "",
   });
+  const nameRef = useRef(null),
+    proffessionRed = useRef(null),
+    emailRef = useRef(null),
+    noRef = useRef(null),
+    websiteRef = useRef(null);
 
+    
   const [isEdit, setIsEdit] = useState(false);
   const [clearStaticData, setClearStaticData] = useState(false);
   const [clearGuideData, setclearGuideData] = useState(true);
@@ -52,6 +58,7 @@ export default function App() {
               className="form--input"
               name="name"
               value={form.name}
+              ref={textRef}
             />
 
             <input
@@ -110,6 +117,7 @@ export default function App() {
             clearGuideData={clearGuideData}
             isEdit={isEdit}
             rmGuideBtn={rmGuideBtn}
+            textRef={textRef}
           />
           <EditBtn setIsEdit={setIsEdit} />
         </>
