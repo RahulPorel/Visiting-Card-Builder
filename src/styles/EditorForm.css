@@ -196,7 +196,7 @@
   overflow: hidden;
 }
 
-.edit-card-btn {
+.rm-default-btn-styles {
   color: #ffffff;
   text-decoration: none;
   letter-spacing: 1px;
@@ -210,7 +210,18 @@
 }
 
 /* Third Button */
-
+.edit-card-btn {
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
 #button-3 {
   position: relative;
   overflow: hidden;
@@ -244,5 +255,36 @@
 }
 
 #button-3:hover .edit-card-btn {
+  color: #2d3142;
+}
+
+/* Second Button */
+
+#button-2 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#button-2 .instructed-btn {
+  position: relative;
+  transition: all 0.35s ease-Out;
+}
+
+#slide {
+  width: 100%;
+  height: 100%;
+  left: -200px;
+  background: #bfc0c0;
+  position: absolute;
+  transition: all 0.35s ease-Out;
+  bottom: 0;
+}
+
+#button-2:hover #slide {
+  left: 0;
+}
+
+#button-2:hover .instructed-btn {
   color: #2d3142;
 }

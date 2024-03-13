@@ -165,24 +165,38 @@ export default function Card(props) {
       </div>
 
       <div className="edit-button-ws">
-        <button className="form--edit" onClick={handleStaticData}>
+        <button className="form--edit " onClick={handleStaticData}>
           {loadStaticData ? "Load Example" : "Clear Example"}
         </button>
 
         {props.rmGuideBtn ? (
           ""
         ) : (
-          <button className="form--edit" onClick={handleGuideData}>
-            {!loadGuideData ? "Load Instruction" : "Clear Instruction"}
-          </button>
+          // <button className="form--edit" onClick={handleGuideData}>
+          //   {!loadGuideData ? "Load Instruction" : "Clear Instruction"}
+          // </button>
+
+          <div className="button" id="button-2" onClick={handleGuideData}>
+            <div id="slide"></div>
+            <button className="instructed-btn rm-default-btn-styles">
+              {!loadGuideData ? "Load Instruction" : "Clear Instruction"}
+            </button>
+          </div>
         )}
 
-        <button className="form--edit" onClick={genPDF}>
+        <button className="form--edit rm-default-btn-styles" onClick={genPDF}>
           Print
         </button>
       </div>
     </>
   );
+}
+
+{
+  /* <div class="button" id="button-2">
+<div id="slide"></div>
+<a href="#">Let's Go!</a>
+</div> */
 }
 
 // TODO:
