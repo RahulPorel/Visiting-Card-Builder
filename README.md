@@ -6,9 +6,18 @@ Visiting Card Builder let you build visiting card for your bussiness or for pers
 
 # Features
 
-- Fully editable & customizable visiting card with features such as Printing, Default example, Default Instruction
-- Click to view on icon to go where you assign it to. For ex:- click phone icon to copy phone no or website icon for opening in new tab etc.
+- Fully editable & customizable visiting card with features such as
+  Click to add profile photo or logo, Copy Card text to clipboard and Print card as pdf.
+- Copy Btn let copy all your personalized content you add via edit button on single click.
 - More features are in development stage.
+- NOTE: copy btn only copy's your content not load ex or instruction content
+- NOTE: profile photo or logo can be added by simply clicking on circle where images goes not from edit btn.
+- When you click copy btn it will copy your content and it will show like this below ex:  
+  Name: Dave Porel
+  Profession: Bussineman
+  Email-Id: dave121@gmail.com
+  Phone-No: 00-00-000-00
+  Website-Url: www.daveplu.com
 
 # Live Demo 👁️
 
