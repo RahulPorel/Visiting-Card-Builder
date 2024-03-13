@@ -17,6 +17,7 @@ export default function Card(props) {
     props.clearStaticData ? true : false
   );
   const [showConfetti, setShowConfetti] = useState(false);
+  const [isCopy, setIsCopy] = useState(false);
 
   const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 480px)").matches
@@ -27,7 +28,7 @@ export default function Card(props) {
     props.emailRef.current?.select();
     props.noRef.current?.select();
     props.websiteRef.current?.select();
-
+    setIsCopy(true);
     window.navigator.clipboard.writeText(
       ` Name: ${props.form.name} \n Profession: ${props.form.proffession} \n Email-Id: ${props.form.email} \n Phone-No: ${props.form.phone_no} \n Website-Url: ${props.form.website}`
     );
@@ -79,6 +80,20 @@ export default function Card(props) {
             }}
           >
             ` Thank you {props.form.name} for using are service`
+          </h1>
+        ) : (
+          ""
+        )}
+        {isCopy ? (
+          <h1
+            className="gradient-text"
+            style={{
+              fontSize: "15px",
+              color: "aliceblue",
+              textAlign: "center",
+            }}
+          >
+            {props.form.name} your card text copied to clipboard
           </h1>
         ) : (
           ""
@@ -225,7 +240,7 @@ export default function Card(props) {
               {/* copy btn */}
               <div className="button" id="button-7" onClick={copyToClip}>
                 <div id="dub-arrow">
-                  <i className="fa-solid fa-copy"></i>
+                  <i className="fa-regular fa-copy"></i>
                 </div>
                 <button className="print-btn rm-default-btn-styles">
                   Copy
