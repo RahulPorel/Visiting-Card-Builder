@@ -340,3 +340,14 @@
   flex-direction: column;
   align-content: center;
 }
+
+.preview-btn {
+  color: #ffffff;
+}
+.preview-btn-container {
+  background-color: #0b2434;
+}
+.fa-eye {
+  font-size: 1.35rem;
+  color: #021d2e;
+}

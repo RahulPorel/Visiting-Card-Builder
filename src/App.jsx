@@ -89,9 +89,22 @@ export default function App() {
               name="website"
             />
 
-            <button className="form--submit" onClick={handlePreview}>
+            <div
+              className="button preview-btn-container"
+              id="button-7"
+              onClick={handlePreview}
+            >
+              <div id="dub-arrow" className="dub-arrow-preview">
+                <i className="fa-regular fa-eye"></i>
+              </div>
+              <button className="preview-btn rm-default-btn-styles">
+                Preview
+              </button>
+            </div>
+
+            {/* <button className="form--submit" onClick={handlePreview}>
               Preview
-            </button>
+            </button> */}
           </form>
         </div>
       ) : (
