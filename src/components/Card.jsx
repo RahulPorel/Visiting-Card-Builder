@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import staticData from "./staticData";
 import guideData from "./guideData";
 import ImgUpload from "./ImgUpload";
@@ -17,6 +17,16 @@ export default function Card(props) {
     props.clearStaticData ? true : false
   );
   const [showConfetti, setShowConfetti] = useState(false);
+
+  const [matches, setMatches] = useState(
+    window.matchMedia("(min-width: 480px)").matches
+  );
+
+  useEffect(() => {
+    window
+      .matchMedia("(min-width: 480px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
+  }, []);
 
   const handleStaticData = () => {
     setLoadStaticData(!loadStaticData);
@@ -44,7 +54,7 @@ export default function Card(props) {
 
   return (
     <>
-      {showConfetti && <Confetti />}
+      {showConfetti && matches && <Confetti />}
       <div className="center-container cssInp" id="pdf">
         {showConfetti ? (
           <h1
