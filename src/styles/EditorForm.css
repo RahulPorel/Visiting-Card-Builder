@@ -44,16 +44,6 @@
   font-family: "Inter", sans-serif;
 }
 
-.form--submit {
-  width: 50%;
-  padding: 10px;
-  border-radius: 5px;
-  color: white;
-  background-color: #639;
-  border: none;
-  cursor: pointer;
-}
-
 .form--marketing {
   display: flex;
   margin-bottom: 20px;
@@ -64,40 +54,9 @@
   margin-right: 10px;
 }
 
-.form--edit {
-  color: rgb(0, 0, 0);
-  padding: 10px 20px;
-  border-radius: 4px;
-  display: flex;
-  float: left;
-  box-shadow: 0px -4px 3px rgb(27 27 24 / 75%);
-}
-
-.edit-button {
-  /* position: fixed;
-  bottom: 50px;
-  padding-top: 10px;
-
-  width: 100%;
-  height: 50px;
-  display: flex;
-
-  justify-content: space-around;
-  align-items: center; */
-  margin-top: 50vh;
-  margin-left: 40vh;
-}
 /* .edit-button:hover {
   background-color: #59e391;
 } */
-.edit-button-ws {
-  margin-top: 15px;
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-}
 
 .gradient-text {
   /* Fallback: Set a background color. */
@@ -320,7 +279,6 @@
   font-size: 1.35rem;
 }
 .wrap-btn {
-  margin-top: 22.5vh;
   display: flex;
   flex-direction: column;
   align-content: center;

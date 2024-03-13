@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 import staticData from "./staticData";
 import guideData from "./guideData";
 import ImgUpload from "./ImgUpload";
@@ -18,12 +18,21 @@ export default function Card(props) {
   );
   const [showConfetti, setShowConfetti] = useState(false);
   const [isCopy, setIsCopy] = useState(false);
+  const [isCopyEmpty, setIsCopyEmpty] = useState(false);
 
   const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 480px)").matches
   );
 
+  // if ((props.form.name = "")) {
+  //   setIsCopyEmpty(false);
+  // } else {
+  //   setIsCopyEmpty(true);
+  // }
+
   const copyToClip = useCallback(() => {
+    props.form.name === "" ? setIsCopyEmpty(false) : setIsCopyEmpty(true);
+
     props.nameRef.current?.select(), props.proffessionRef.current?.select();
     props.emailRef.current?.select();
     props.noRef.current?.select();
@@ -84,7 +93,7 @@ export default function Card(props) {
         ) : (
           ""
         )}
-        {isCopy ? (
+        {isCopy && isCopyEmpty ? (
           <h1
             className="gradient-text"
             style={{
@@ -226,17 +235,6 @@ export default function Card(props) {
               )}
             </div>
             <div className="upper-container">
-              {/* printPdf btn */}
-              <div className="button" id="button-7" onClick={genPDF}>
-                <div id="dub-arrow">
-                  <i className="fa-solid fa-print"></i>
-                </div>
-                <button className="print-btn rm-default-btn-styles">
-                  Print
-                </button>
-              </div>
-            </div>{" "}
-            <div className="upper-container">
               {/* copy btn */}
               <div className="button" id="button-7" onClick={copyToClip}>
                 <div id="dub-arrow">
@@ -247,6 +245,17 @@ export default function Card(props) {
                 </button>
               </div>
             </div>
+            <div className="upper-container">
+              {/* printPdf btn */}
+              <div className="button" id="button-7" onClick={genPDF}>
+                <div id="dub-arrow">
+                  <i className="fa-solid fa-print"></i>
+                </div>
+                <button className="print-btn rm-default-btn-styles">
+                  Print
+                </button>
+              </div>
+            </div>{" "}
           </div>
         </div>
       </div>
