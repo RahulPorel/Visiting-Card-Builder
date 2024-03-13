@@ -173,27 +173,32 @@ export default function Card(props) {
             </button>
           </div>
 
-          <div className="uper-container">
-            {/* Instruction btn */}
-            {props.rmGuideBtn ? (
-              ""
-            ) : (
-              <div className="button" id="button-2" onClick={handleGuideData}>
-                <div id="slide"></div>
-                <button className="instructed-btn rm-default-btn-styles">
-                  {!loadGuideData ? "Load Instruction" : "Clear Instruction"}
+          <div className="wrap-down-btn">
+            <div className="uper-container">
+              {/* Instruction btn */}
+              {props.rmGuideBtn ? (
+                ""
+              ) : (
+                <div className="button" id="button-2" onClick={handleGuideData}>
+                  <div id="slide"></div>
+                  <button className="instructed-btn rm-default-btn-styles">
+                    {!loadGuideData ? "Load Instruction" : "Clear Instruction"}
+                  </button>
+                </div>
+              )}
+            </div>
+
+            <div className="upper-container">
+              {/* printPdf btn */}
+              <div className="button" id="button-7" onClick={genPDF}>
+                <div id="dub-arrow">
+                  <i className="fa-solid fa-print"></i>
+                </div>
+                <button className="print-btn rm-default-btn-styles">
+                  Print
                 </button>
               </div>
-            )}
-          </div>
-        </div>
-        <div className="upper-container">
-          {/* printPdf btn */}
-          <div className="button" id="button-7" onClick={genPDF}>
-            <div id="dub-arrow">
-              <i className="fa-solid fa-print"></i>
             </div>
-            <button className="print-btn rm-default-btn-styles">Print</button>
           </div>
         </div>
       </div>

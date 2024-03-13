@@ -43,6 +43,18 @@
 .inst-logo {
   text-align: center;
   color: blanchedalmond;
-  font-size: 0.80rem;
+  font-size: 0.8rem;
   margin-top: -1.75px;
+}
+@media screen and (max-width: 470px) {
+  .picture input[type="file"] {
+    cursor: pointer;
+    display: block;
+    height: 40%;
+
+    opacity: 0 !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 }

@@ -99,21 +99,6 @@
   gap: 12px;
 }
 
-@media screen and (max-width: 470px) {
-  .edit-button {
-    margin-top: 60px;
-    width: 100%;
-    margin-left: 40%;
-  }
-  .edit-button-ws {
-    margin-top: 25px;
-    display: flex;
-    margin-left: 15px;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-}
-
 .gradient-text {
   /* Fallback: Set a background color. */
   background-color: #ffee00;
@@ -350,4 +335,29 @@
 .fa-eye {
   font-size: 1.35rem;
   color: #021d2e;
+}
+@media screen and (max-width: 470px) {
+  .edit-button {
+    margin-top: 60px;
+    width: 100%;
+    margin-left: 40%;
+  }
+  .edit-button-ws {
+    margin-top: 25px;
+    display: flex;
+    margin-left: 15px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .wrap-btn {
+    margin-top: 15.8vh;
+    margin-left: 3.5%;
+
+    align-content: center;
+    display: inline-flex;
+  }
+  .wrap-down-btn {
+    margin-top: 50.8vh;
+    margin-left: 50%;
+  }
 }
