@@ -69,7 +69,7 @@ export default function Card(props) {
     html2canvas(element).then((canvas) => {
       const pdf = new jsPDF();
       const imgData = canvas.toDataURL("image/png");
-      pdf.addImage(imgData, "PNG", 0, 10);
+      pdf.addImage(imgData, "PNG", 10, 10);
       pdf.save(`${props.form.name}-visting-card.pdf`);
       setShowConfetti(!showConfetti);
     });
@@ -231,7 +231,7 @@ export default function Card(props) {
                 ""
               ) : (
                 <div
-                  className="button hide-btn"
+                  className="button  hide-btn"
                   id="button-2"
                   onClick={handleGuideData}
                 >
@@ -244,7 +244,7 @@ export default function Card(props) {
             </div>
             <div className="upper-container hide-btn">
               {/* copy btn */}
-              <div className="button" id="button-7" onClick={copyToClip}>
+              <div className="button " id="button-7" onClick={copyToClip}>
                 <div id="dub-arrow">
                   <i className="fa-regular fa-copy"></i>
                 </div>
@@ -255,7 +255,7 @@ export default function Card(props) {
             </div>
             <div className="upper-container">
               {/* printPdf btn */}
-              <div className="button" id="button-7" onClick={genPDF}>
+              <div className="button button-for-mobile" id="button-7" onClick={genPDF}>
                 <div id="dub-arrow">
                   <i className="fa-solid fa-print"></i>
                 </div>

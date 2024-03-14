@@ -296,7 +296,7 @@
   color: #021d2e;
 }
 @media screen and (max-width: 470px) {
-  .button {
+  .button-for-mobile {
     margin-left: 30%;
     margin-top: 0%;
   }
