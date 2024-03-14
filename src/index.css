@@ -196,13 +196,13 @@ a {
 @media screen and (max-width: 375px) {
   .biz-card-a,
   .biz-card-b {
-    margin-left: 11%;
+    margin-left: 16%;
   }
 }
 
 @media screen and (max-width: 320px) {
   .biz-card-a,
   .biz-card-b {
-    margin-left: 5%;
+    margin-left: 15%;
   }
 }

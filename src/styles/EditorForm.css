@@ -296,27 +296,12 @@
   color: #021d2e;
 }
 @media screen and (max-width: 470px) {
-  .edit-button {
-    margin-top: 60px;
-    width: 100%;
-    margin-left: 40%;
+  .button {
+    margin-left: 30%;
+    margin-top: 0%;
   }
-  .edit-button-ws {
-    margin-top: 25px;
-    display: flex;
-    margin-left: 15px;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  .wrap-btn {
-    margin-top: 15.8vh;
-    margin-left: 3.5%;
 
-    align-content: center;
-    display: inline-flex;
-  }
-  .wrap-down-btn {
-    margin-top: 50.8vh;
-    margin-left: 50%;
+  .hide-btn {
+    display: none;
   }
 }

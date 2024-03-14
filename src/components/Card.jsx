@@ -69,7 +69,7 @@ export default function Card(props) {
     html2canvas(element).then((canvas) => {
       const pdf = new jsPDF();
       const imgData = canvas.toDataURL("image/png");
-      pdf.addImage(imgData, "PNG", 50, 50);
+      pdf.addImage(imgData, "PNG", 0, 10);
       pdf.save(`${props.form.name}-visting-card.pdf`);
       setShowConfetti(!showConfetti);
     });
@@ -211,9 +211,13 @@ export default function Card(props) {
         </div>
       </div>
       <div className="wrap-btn">
-        <div className="upper-container">
+        <div className="upper-container ">
           {/* loadex btn */}
-          <div className="button" id="button-2" onClick={handleStaticData}>
+          <div
+            className="button hide-btn"
+            id="button-2"
+            onClick={handleStaticData}
+          >
             <div id="slide"></div>
             <button className="instructed-btn rm-default-btn-styles">
               {loadStaticData ? "Load Example" : "Clear Example"}
@@ -221,12 +225,16 @@ export default function Card(props) {
           </div>
 
           <div className="wrap-down-btn">
-            <div className="uper-container">
+            <div className="uper-container hide-btn">
               {/* Instruction btn */}
               {props.rmGuideBtn ? (
                 ""
               ) : (
-                <div className="button" id="button-2" onClick={handleGuideData}>
+                <div
+                  className="button hide-btn"
+                  id="button-2"
+                  onClick={handleGuideData}
+                >
                   <div id="slide"></div>
                   <button className="instructed-btn rm-default-btn-styles">
                     {!loadGuideData ? "Load Instruction" : "Clear Instruction"}
@@ -234,13 +242,13 @@ export default function Card(props) {
                 </div>
               )}
             </div>
-            <div className="upper-container">
+            <div className="upper-container hide-btn">
               {/* copy btn */}
               <div className="button" id="button-7" onClick={copyToClip}>
                 <div id="dub-arrow">
                   <i className="fa-regular fa-copy"></i>
                 </div>
-                <button className="print-btn rm-default-btn-styles">
+                <button className="print-btn rm-default-btn-styles mobile-styling-copy-btn ">
                   Copy
                 </button>
               </div>
@@ -251,11 +259,11 @@ export default function Card(props) {
                 <div id="dub-arrow">
                   <i className="fa-solid fa-print"></i>
                 </div>
-                <button className="print-btn rm-default-btn-styles">
+                <button className="print-btn rm-default-btn-styles mobile-styling-copy-btn">
                   Print
                 </button>
               </div>
-            </div>{" "}
+            </div>
           </div>
         </div>
       </div>
