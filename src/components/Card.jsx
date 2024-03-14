@@ -8,6 +8,7 @@ import Confetti from "react-confetti";
 import "../index.css";
 import "../styles/EditorForm.css";
 import RandomColorTemp from "./RandomColorTemp";
+import PropTypes from "prop-types";
 
 export default function Card(props) {
   const [loadStaticData, setLoadStaticData] = useState(
