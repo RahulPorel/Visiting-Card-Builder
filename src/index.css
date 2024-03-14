@@ -107,7 +107,7 @@ a {
 .biz-shape {
   float: right;
   background: #ff4d79;
-
+  /* remove this before adding random color */
   background: -webkit-linear-gradient(-45deg, #ff4d79 0%, #ea2e6d 100%);
   background: -ms-linear-gradient(-45deg, #ff4d79 0%, #ea2e6d 100%);
   background: linear-gradient(135deg, #ff4d79 0%, #ea2e6d 100%);

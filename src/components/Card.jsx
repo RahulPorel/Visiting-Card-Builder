@@ -7,6 +7,7 @@ import jsPDF from "jspdf";
 import Confetti from "react-confetti";
 import "../index.css";
 import "../styles/EditorForm.css";
+import RandomColorTemp from "./RandomColorTemp";
 
 export default function Card(props) {
   const [loadStaticData, setLoadStaticData] = useState(
@@ -23,6 +24,30 @@ export default function Card(props) {
   const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 480px)").matches
   );
+
+  // random color gen
+
+  // const [color, setColor] = useState("#000");
+  // const getRgb = () => Math.floor(Math.random() * 256);
+
+  // const rgbToHex = (r, g, b) =>
+  //   "#" +
+  //   [r, g, b]
+  //     .map((x) => {
+  //       const hex = x.toString(16);
+  //       return hex.length === 1 ? "0" + hex : hex;
+  //     })
+  //     .join("");
+
+  // const handleColorGenerate = () => {
+  //   const color = {
+  //     r: getRgb(),
+  //     g: getRgb(),
+  //     b: getRgb(),
+  //   };
+
+  //   setColor(rgbToHex(color.r, color.g, color.b));
+  // };
 
   // if ((props.form.name = "")) {
   //   setIsCopyEmpty(false);
@@ -147,7 +172,12 @@ export default function Card(props) {
             </div>
 
             <div className="biz-card-b">
-              <div className="biz-shape">
+              {/* // color  */}
+              <div
+                className="biz-shape"
+                // random color gen
+                //  style={{ backgroundColor: color ,  color: color }}
+              >
                 <div className="biz-contact-box">
                   <div className="biz-email">
                     <i className="fa-solid fa-envelope"></i>
@@ -255,7 +285,11 @@ export default function Card(props) {
             </div>
             <div className="upper-container">
               {/* printPdf btn */}
-              <div className="button button-for-mobile" id="button-7" onClick={genPDF}>
+              <div
+                className="button button-for-mobile"
+                id="button-7"
+                onClick={genPDF}
+              >
                 <div id="dub-arrow">
                   <i className="fa-solid fa-print"></i>
                 </div>
@@ -264,6 +298,21 @@ export default function Card(props) {
                 </button>
               </div>
             </div>
+            {/* <div className="upper-container">
+        // random color gen
+              <div
+                className="button button-for-mobile"
+                id="button-7"
+                onClick={handleColorGenerate}
+              >
+                <div id="dub-arrow">
+                  <i className="fa-solid fa-print"></i>
+                </div>
+                <button className="print-btn rm-default-btn-styles mobile-styling-copy-btn">
+                  Ramdom
+                </button>
+              </div>
+            </div> */}
           </div>
         </div>
       </div>
