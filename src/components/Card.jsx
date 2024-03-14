@@ -20,6 +20,8 @@ export default function Card(props) {
   const [showConfetti, setShowConfetti] = useState(false);
   const [isCopy, setIsCopy] = useState(false);
   const [isCopyEmpty, setIsCopyEmpty] = useState(false);
+  const [showCopyMsg, setShowCopyMsg] = useState(false);
+  const [showPrintMsg, setShowPrintMsg] = useState(false);
 
   const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 480px)").matches
@@ -63,6 +65,9 @@ export default function Card(props) {
     props.noRef.current?.select();
     props.websiteRef.current?.select();
     setIsCopy(true);
+    setTimeout(() => {
+      setIsCopy(false);
+    }, 3000);
     window.navigator.clipboard.writeText(
       ` Name: ${props.form.name} \n Profession: ${props.form.proffession} \n Email-Id: ${props.form.email} \n Phone-No: ${props.form.phone_no} \n Website-Url: ${props.form.website}`
     );
@@ -96,7 +101,11 @@ export default function Card(props) {
       const imgData = canvas.toDataURL("image/png");
       pdf.addImage(imgData, "PNG", 10, 10);
       pdf.save(`${props.form.name}-visting-card.pdf`);
+
       setShowConfetti(!showConfetti);
+      setTimeout(() => {
+        setShowConfetti(false);
+      }, 5000);
     });
   }
 
