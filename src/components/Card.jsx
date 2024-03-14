@@ -20,7 +20,7 @@ export default function Card(props) {
   const [showConfetti, setShowConfetti] = useState(false);
   const [isCopy, setIsCopy] = useState(false);
   const [isCopyEmpty, setIsCopyEmpty] = useState(false);
-  const [showCopyMsg, setShowCopyMsg] = useState(false);
+  // const [showCopyMsg, setShowCopyMsg] = useState(false);
   const [showPrintMsg, setShowPrintMsg] = useState(false);
 
   const [matches, setMatches] = useState(
@@ -59,7 +59,6 @@ export default function Card(props) {
 
   const copyToClip = useCallback(() => {
     props.form.name === "" ? setIsCopyEmpty(false) : setIsCopyEmpty(true);
-
     props.nameRef.current?.select(), props.proffessionRef.current?.select();
     props.emailRef.current?.select();
     props.noRef.current?.select();
@@ -95,18 +94,25 @@ export default function Card(props) {
 
   // convert fucking code to pdf
   function genPDF() {
-    const element = document.querySelector("#pdf");
-    html2canvas(element).then((canvas) => {
-      const pdf = new jsPDF();
-      const imgData = canvas.toDataURL("image/png");
-      pdf.addImage(imgData, "PNG", 10, 10);
-      pdf.save(`${props.form.name}-visting-card.pdf`);
-
-      setShowConfetti(!showConfetti);
+    if (props.form.name === "") {
+      setShowPrintMsg(true);
       setTimeout(() => {
-        setShowConfetti(false);
-      }, 5000);
-    });
+        setShowPrintMsg(false);
+      }, 4000);
+    } else {
+      const element = document.querySelector("#pdf");
+      html2canvas(element).then((canvas) => {
+        const pdf = new jsPDF();
+        const imgData = canvas.toDataURL("image/png");
+        pdf.addImage(imgData, "PNG", 10, 10);
+        pdf.save(`${props.form.name}-visting-card.pdf`);
+
+        setShowConfetti(!showConfetti);
+        setTimeout(() => {
+          setShowConfetti(false);
+        }, 5000);
+      });
+    }
   }
 
   return (
@@ -137,6 +143,20 @@ export default function Card(props) {
             }}
           >
             {props.form.name} your card text copied to clipboard
+          </h1>
+        ) : (
+          ""
+        )}
+        {showPrintMsg ? (
+          <h1
+            className="gradient-text"
+            style={{
+              fontSize: "15px",
+              color: "aliceblue",
+              textAlign: "center",
+            }}
+          >
+            First enter your details to card then print
           </h1>
         ) : (
           ""
