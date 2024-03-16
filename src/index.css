@@ -24,8 +24,8 @@ a {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
   color: rgb(0, 0, 0);
-  font-weight: 500;
-  font-size: 0.78rem;
+  font-weight: 450;
+  font-size: 0.69rem;
 }
 
 /*=============================
@@ -57,7 +57,7 @@ a {
 	     Left Content
 ===============================*/
 .biz-card-a {
-  width: 165px;
+  width: 160px;
   height: 220px;
   background-color: #f2f2f2;
   float: left;
@@ -68,24 +68,22 @@ a {
 }
 
 .biz-words-container {
-  margin-top: 95px;
+  margin-top: 92.5px;
 }
 
 .biz-name {
   text-align: center;
-  font-weight: 500;
+  font-weight: 515;
   color: #252526;
-  font-size: 1.25rem;
-
-  margin-top: -3.5em;
+  font-size: 1.25em;
+  margin-top: -4.35em;
 }
 
 .biz-title {
   text-align: center;
-
   color: #252526;
-  font-size: 0.85rem;
-  font-weight: 390;
+  font-size: 0.7em;
+  font-weight: 410;
 }
 
 /*=============================
@@ -114,7 +112,7 @@ a {
   transform: scaleX(1) rotate(50deg);
   top: 0;
   bottom: 0;
-  height: 308px;
+  height: 322px;
   margin: -25px -55px 0 0;
   border-radius: 50px;
   width: 100%;
@@ -124,25 +122,23 @@ a {
 
 .biz-contact-box {
   position: absolute;
-  margin-top: 140px;
-  margin-left: 1px;
-  width: 210px;
+  margin-top: 125px;
+  margin-left: -2.5px;
+  width: 285px;
   transform: scaleX(1) rotate(-50deg);
 }
 
 .fa-chrome,
 .fa-envelope,
 .fa-phone {
-  margin: 10px 15px;
-  font-size: 18px;
+  margin: 10px 8.75px;
+  font-size: 15px;
   color: rgb(15, 22, 26);
 }
-.email-clas {
-  margin-left: 25px;
-}
-.picture-src {
+
+/* .picture-src {
   src: local("./components//assests/static_assests/logo_sample.png");
-}
+} */
 
 /*=============================
 	 Business Card Mobile
@@ -205,4 +201,7 @@ a {
   .biz-card-b {
     margin-left: 15%;
   }
+}
+.fa-envelope {
+  font-size: 14.5px;
 }
