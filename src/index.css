@@ -162,7 +162,7 @@ a {
   }
 
   .biz-headshot {
-    margin-top: 6px;
+    margin-top: 0px;
   }
 
   .biz-card-b {
@@ -183,16 +183,16 @@ a {
 
   .biz-contact-box {
     position: absolute;
-    margin-top: 150px;
+    margin-top: 145px;
     margin-left: -20px;
-    width: 210px;
+    width: 200px;
   }
 }
 
 @media screen and (max-width: 375px) {
   .biz-card-a,
   .biz-card-b {
-    margin-left: 16%;
+    margin-left: 15.5%;
   }
 }
 
@@ -203,5 +203,5 @@ a {
   }
 }
 .fa-envelope {
-  font-size: 14.5px;
+  font-size: 15px;
 }
