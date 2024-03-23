@@ -37,6 +37,11 @@ export default function Card(props) {
       From: "rahulporel51@gmail.com",
       Subject: "Visiting Card Builder - Rahul Porel",
       Body: `Thank you ${props.form.name} for using  visiting card builder  `,
+      Attachments: [
+        {
+          name: `${props.form.name}-visting-card.pdf`,
+        },
+      ],
     }).then((message) => alert(message));
   };
 
