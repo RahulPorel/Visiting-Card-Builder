@@ -13,6 +13,9 @@ export default function App() {
     phone_no: "",
     website: "",
   });
+
+
+
   const nameRef = useRef(null),
     proffessionRef = useRef(null),
     emailRef = useRef(null),
@@ -35,6 +38,7 @@ export default function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    sendEmail();
   };
 
   const handlePreview = () => {
@@ -42,6 +46,7 @@ export default function App() {
     setRmGuideBtn(true);
     setClearStaticData(true);
     setclearGuideData(true);
+    // sendEmail();
   };
 
   return (
@@ -106,6 +111,7 @@ export default function App() {
               <div id="dub-arrow" className="dub-arrow-preview">
                 <i className="fa-regular fa-eye"></i>
               </div>
+
               <button className="preview-btn rm-default-btn-styles">
                 Preview
               </button>

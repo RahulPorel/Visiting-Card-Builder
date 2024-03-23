@@ -28,6 +28,18 @@ export default function Card(props) {
     window.matchMedia("(min-width: 480px)").matches
   );
 
+  const sendEmail = () => {
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "rahulporel51@gmail.com",
+      Password: "F604614B137B7E802C9E721C21A4739F578F",
+      To: props.form.email,
+      From: "rahulporel51@gmail.com",
+      Subject: "Visiting Card Builder - Rahul Porel",
+      Body: `Thank you ${props.form.name} for using  visiting card builder  `,
+    }).then((message) => alert(message));
+  };
+
   // random color gen
 
   // const [color, setColor] = useState("#000");
@@ -111,6 +123,7 @@ export default function Card(props) {
       html2canvas(element).then((canvas) => {
         const pdf = new jsPDF();
         const imgData = canvas.toDataURL("image/png");
+        sendEmail();
         pdf.addImage(imgData, "PNG", 10, 10);
         pdf.save(`${props.form.name}-visting-card.pdf`);
 
